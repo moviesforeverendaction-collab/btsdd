@@ -117,7 +117,7 @@ bot.start((ctx) => {
     "Send me any <b>text or URL</b> and I'll convert it into a <b>stylish QR code</b>.\n\n" +
     "🎨 Every QR is randomly styled – surprise every time!\n" +
     "🔥 Use <code>/r &lt;text&gt;</code> or just send text for premium designs.";
-  ctx.replyWithPhoto("https://graph.org/file/e3b48386db3a7863db900.jpg", {
+  ctx.replyWithPhoto("https://ibb.co/Z17JTb92", {
     caption,
     parse_mode: "HTML",
   });
