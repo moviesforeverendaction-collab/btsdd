@@ -28,9 +28,5 @@ USER botuser
 # Expose port (used in webhook mode)
 EXPOSE 3000
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-  CMD wget -qO- http://localhost:3000/health || exit 1
-
 # Default: webhook mode. Override with: docker run ... node polling.js
 CMD ["node", "server.js"]
