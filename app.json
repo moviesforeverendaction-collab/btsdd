@@ -1,0 +1,45 @@
+{
+  "name": "QR Telegram Bot",
+  "description": "Aesthetic QR Code Generator Telegram Bot",
+  "keywords": ["telegram", "bot", "qr-code", "nodejs"],
+  "repository": "https://github.com/your-username/qr-bot",
+  "logo": "https://graph.org/file/e3b48386db3a7863db900.jpg",
+  "stack": "heroku-22",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token from @BotFather",
+      "required": true
+    },
+    "CHANNEL_ID": {
+      "description": "Your Telegram Channel ID (negative number)",
+      "required": true
+    },
+    "CHANNEL_LINK": {
+      "description": "Your Telegram Channel Link (https://t.me/...)",
+      "required": true
+    },
+    "BOT_USERNAME": {
+      "description": "Your bot's username (without @)",
+      "required": true
+    },
+    "WEBHOOK_DOMAIN": {
+      "description": "Auto-set by Heroku — leave blank",
+      "required": false
+    },
+    "NODE_ENV": {
+      "description": "Environment",
+      "value": "production"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}
